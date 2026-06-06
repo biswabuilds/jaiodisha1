@@ -1087,21 +1087,25 @@ body {
   color: var(--mid);
   max-width: 560px;
 }
+
 /* Projects section */
 .projects-sec {
+  margin-top: 100px;
   .text {
     font-size: 30px;
     font-family: 'Cormorant Garamond', serif;
-    line-height: 4 ;
+    line-height: 7;
 
   }
   .listen {
     margin-left: 0px;
-    line-height: 1;
+    z-index: 3;
+   
    
   }
   .care {
     margin-left: 60px;
+    
   }
   .speak {
     margin-left: 120px;
