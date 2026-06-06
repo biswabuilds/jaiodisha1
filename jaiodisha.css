@@ -2545,3 +2545,349 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+/* Refined home page */
+.home-page {
+  background: #f7f8f5;
+  color: #16231f;
+  overflow-x: hidden;
+}
+
+.home-page main {
+  overflow: hidden;
+}
+
+.home-page .home-hero {
+  align-items: center;
+  color: #ffffff;
+  display: flex;
+  min-height: clamp(560px, 78vh, 760px);
+  overflow: hidden;
+  padding: clamp(72px, 9vw, 112px) 6vw clamp(110px, 12vw, 150px);
+  position: relative;
+}
+
+.home-page .home-hero::before {
+  background:
+    linear-gradient(90deg, rgba(7, 25, 45, 0.9), rgba(7, 25, 45, 0.58) 52%, rgba(7, 25, 45, 0.28)),
+    linear-gradient(0deg, rgba(7, 25, 45, 0.7), transparent 42%);
+  content: "";
+  inset: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.home-page .slideshow {
+  filter: none;
+  height: 100%;
+  inset: 0;
+  object-fit: initial;
+  position: absolute;
+  width: 100%;
+  z-index: 0;
+}
+
+.home-page .slide {
+  animation: homeFade 20s infinite;
+}
+
+.home-page .slide:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.home-page .slide:nth-child(2) {
+  animation-delay: 5s;
+}
+
+.home-page .slide:nth-child(3) {
+  animation-delay: 10s;
+}
+
+.home-page .slide:nth-child(4) {
+  animation-delay: 15s;
+}
+
+.home-page .slide img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
+@keyframes homeFade {
+  0%, 100% {
+    opacity: 0;
+  }
+
+  8%, 26% {
+    opacity: 1;
+  }
+
+  34% {
+    opacity: 0;
+  }
+}
+
+.home-hero-copy {
+  animation: fadeUp 0.9s ease both;
+  max-width: 720px;
+  min-width: 0;
+  position: relative;
+  width: min(100%, 720px);
+  z-index: 2;
+}
+
+.home-kicker {
+  color: #f7c948;
+  font-size: clamp(0.86rem, 1.2vw, 1rem);
+  font-weight: 800;
+  letter-spacing: 0;
+  margin: 0 0 18px;
+  text-transform: uppercase;
+}
+
+.home-hero-copy h1 {
+  font-size: clamp(3rem, 7vw, 5.8rem);
+  line-height: 0.98;
+  margin: 0 0 24px;
+  max-width: 720px;
+}
+
+.home-hero-copy > p {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  line-height: 1.55;
+  margin: 0;
+  max-width: 640px;
+}
+
+.home-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 34px;
+}
+
+.home-actions a {
+  align-items: center;
+  border-radius: 8px;
+  display: inline-flex;
+  font-size: 1.08rem;
+  font-weight: 800;
+  gap: 10px;
+  justify-content: center;
+  min-height: 52px;
+  padding: 13px 20px;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.home-actions a i {
+  color: inherit;
+  font-size: 1rem;
+}
+
+.home-actions a:hover {
+  transform: translateY(-2px);
+}
+
+.home-primary-action {
+  background: #b8312f;
+  color: #ffffff;
+}
+
+.home-primary-action:hover {
+  background: #942725;
+}
+
+.home-secondary-action {
+  background: #ffffff;
+  color: #123f3a;
+}
+
+.home-secondary-action:hover {
+  background: #f7c948;
+  color: #123f3a;
+}
+
+.home-hero-strip {
+  align-items: center;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.14);
+  border-top: 1px solid rgba(255, 255, 255, 0.24);
+  bottom: 0;
+  display: grid;
+  gap: 1px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  left: 0;
+  position: absolute;
+  right: 0;
+  z-index: 2;
+}
+
+.home-hero-strip span {
+  color: #ffffff;
+  font-size: clamp(1rem, 1.7vw, 1.3rem);
+  font-weight: 800;
+  padding: 24px 6vw;
+  text-align: center;
+}
+
+.home-hero-strip span + span {
+  border-left: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.home-page .about-section {
+  background: #ffffff;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  display: grid;
+  gap: clamp(28px, 5vw, 64px);
+  grid-template-columns: minmax(240px, 0.85fr) minmax(0, 1.15fr);
+  margin: 0;
+  padding: clamp(58px, 8vw, 92px) 6vw;
+  width: 100%;
+}
+
+.home-page .who-are-we {
+  background: transparent;
+  color: #123f3a;
+  padding: 0;
+  text-align: left;
+}
+
+.home-page .who-are-we p {
+  color: #b8312f;
+  font-size: 0.94rem;
+  font-weight: 800;
+  margin: 0 0 14px;
+  text-transform: uppercase;
+}
+
+.home-page .who-are-we h2 {
+  animation: none;
+  color: #123f3a;
+  display: block;
+  font-size: clamp(2.15rem, 4.2vw, 4rem);
+  line-height: 1.08;
+  margin: 0;
+  padding: 0;
+  text-shadow: none;
+}
+
+.home-page .who-are-we h2::after {
+  display: none;
+}
+
+.home-about-copy {
+  border-left: 5px solid #f7c948;
+  padding-left: clamp(22px, 3vw, 36px);
+}
+
+.home-page .about-section .home-about-copy p {
+  color: #52645d;
+  font-family: inherit;
+  font-size: clamp(1.08rem, 1.7vw, 1.35rem);
+  line-height: 1.7;
+  margin: 0;
+  text-align: left;
+}
+
+.home-page .about-section .home-about-copy p:first-child {
+  color: #23312b;
+  font-weight: 700;
+}
+
+.home-page .about-section .home-about-copy p:last-child {
+  color: #52645d;
+  font-style: normal;
+  margin-top: 18px;
+}
+
+.home-page footer {
+  margin-top: 0;
+}
+
+@media (max-width: 900px) {
+  .home-page .home-hero {
+    min-height: 620px;
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+  .home-page .home-hero::before {
+    background: linear-gradient(90deg, rgba(7, 25, 45, 0.92), rgba(7, 25, 45, 0.54));
+  }
+
+  .home-page .about-section {
+    grid-template-columns: 1fr;
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+}
+
+@media (max-width: 560px) {
+  .home-page .home-hero {
+    min-height: 680px;
+    padding: 64px 20px 150px;
+  }
+
+  .home-page .contact-nav-links {
+    gap: 4px 14px;
+    justify-content: flex-start;
+  }
+
+  .home-page .contact-nav-links a {
+    font-size: 1.05rem;
+  }
+
+  .home-hero-copy {
+    max-width: none;
+    width: 100%;
+  }
+
+  .home-hero-copy h1,
+  .home-hero-copy > p {
+    max-width: 100%;
+  }
+
+  .home-hero-copy h1 {
+    font-size: clamp(2.35rem, 10vw, 2.75rem);
+    line-height: 1.02;
+  }
+
+  .home-hero-copy > p {
+    font-size: 1rem;
+    max-width: 30ch;
+  }
+
+  .home-actions {
+    width: 100%;
+  }
+
+  .home-actions a {
+    width: 100%;
+  }
+
+  .home-hero-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .home-hero-strip span {
+    padding: 13px 20px;
+  }
+
+  .home-hero-strip span + span {
+    border-left: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+  }
+
+  .home-page .about-section {
+    padding: 46px 20px;
+  }
+
+  .home-about-copy {
+    padding-left: 18px;
+  }
+}
