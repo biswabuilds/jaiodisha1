@@ -1469,6 +1469,10 @@ img {
   font-size:30px;
 }
 
+.hero-content h1{
+  line-height: 2;
+}
+
 .eyebrow {
   color: #d96b2b;
   font-size: 13px;
